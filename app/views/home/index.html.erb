@@ -1,0 +1,17 @@
+<h1>Emojinius</h1>
+<p>Translate your texts into a universal language: Emoji.</p>
+<% unless @translation.output_text.blank? %>
+  <p>Your translation:</p>
+  <div>
+    <%= @translation.output_text %>
+  </div>
+  <hr>
+<% end %>
+<%= form_for @translation, url: translate_path, method: :post do |f| %>
+  <div class="form-group">
+    <%= f.label :input_text, "What do you want to translate?" %>
+    <%= f.text_area :input_text, class: "form-control" %>
+  </div>
+  <%= f.submit "Translate!", class: "btn btn-default" %>
+<% end %>
+<hr>
