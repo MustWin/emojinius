@@ -1,6 +1,9 @@
 Emojinius
 =========
 
+Yes, I know you don't need the DB. We'll be saving all translations at
+some point, though, so... yeah.
+
 To stand up this application:
 
 ```
